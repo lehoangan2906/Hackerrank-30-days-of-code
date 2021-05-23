@@ -16,10 +16,12 @@ class Book{
 class MyBook : public Book{
 
     public:
-         // class Constructor
-        MyBook(string t, string a, int p) : Book(t, a), price(p){}
+         // class Constructor taking 3 parameters
+        MyBook(string t, string a, int p) : Book(t, a){
+            this->price = p;
+        }
 
-    virtual void  display(void) override {
+    virtual void  display(void){
         cout << "Title: " << title << endl;
         cout << "Author: " << author << endl;
         cout << "Price: " << price << endl;
